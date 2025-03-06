@@ -1,0 +1,84 @@
+::ng-deep * {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #a155e8;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 65px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 550px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.labels-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.label-margin {
+  margin: 5px 15px;
+}
+
+.flex-row {
+  display:flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-5 {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.form-input {
+  margin: 5px;
+  width: 250px;
+  height: 15px;
+}
+
+.login-submit {
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.other-options {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+  font-size: 15px;
+}
+
+.option-margin {
+  margin: 8px 5px;
+  cursor: pointer;
+}

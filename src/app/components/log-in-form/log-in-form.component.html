@@ -1,0 +1,27 @@
+<div class="main">
+  <h1 class="title">Forti</h1>
+  <div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="doLogIn()" class="flex-row">
+
+      <div class="labels-container">
+        <label class="label-margin">Email</label>
+        <label class="label-margin">Contraseña</label>
+      </div>
+      <div class="flex-column">
+        <input type="text" formControlName="email" class="form-input">
+
+        <input type="text" formControlName="password" class="form-input">
+        <div class="margin-5">
+          <input type="checkbox"><span>recordarme en este equipo</span>
+        </div>
+        <div class="margin-5">
+          <input type="submit" value="Entrar" class="login-submit">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="other-options">
+    <a class="option-margin">¿Has olvidado la contraseña?</a>
+    <a class="option-margin">¿Quieres una nueva cuenta?</a>
+  </div>
+</div>
