@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {UserAuthenticationController} from '../../core/controllers/user-authentication.controller';
+import {UserLoginModel} from '../../core/models/user-auth.model';
 
 @Component({
   selector: 'app-log-in',
@@ -14,7 +16,8 @@ export class LogInFormComponent implements OnInit {
 
   loginForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,
+              private userAuthController: UserAuthenticationController) {}
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -24,6 +27,6 @@ export class LogInFormComponent implements OnInit {
   }
 
   doLogIn() {
-    console.log(this.loginForm.value);
+    this.userAuthController.userLogin(this.loginForm.value);
   }
 }
