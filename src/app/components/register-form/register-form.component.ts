@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {RouterLink} from '@angular/router';
+import {UserAuthenticationController} from '../../core/controllers/user-authentication.controller';
 
 @Component({
   selector: 'app-register-form',
@@ -17,10 +18,11 @@ export class RegisterFormComponent implements OnInit {
 
   registerForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,
+              private userAuthController: UserAuthenticationController) {}
 
   registerUser() {
-    console.log(this.registerForm.value);
+    this.userAuthController.register(this.registerForm.value);
   }
 
   ngOnInit(): void {
@@ -30,7 +32,7 @@ export class RegisterFormComponent implements OnInit {
       name: new FormControl('', [Validators.required]),
       surnames: new FormControl('', [Validators.required]),
       birthDay: new FormControl('', [Validators.required]),
-      /*profilePhoto: new FormControl('', [Validators.required])*/
+      profilePhoto: new FormControl('', [Validators.required])
     });
   }
 }

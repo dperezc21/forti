@@ -4,9 +4,9 @@ export interface UserLoginModel {
   password: string;
 }
 
-export interface UserLoginResponse {
+export interface AuthUserResponse {
   email: string,
   lastToken: string,
-  "role": string | string[],
-  "issuedAt": Date
+  role: string | string[],
+  issuedAt: Date
 }

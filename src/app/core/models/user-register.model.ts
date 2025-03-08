@@ -4,5 +4,5 @@ export interface UserRegisterModel extends UserLoginModel {
   name: string,
   surnames: string,
   birthDay: Date,
-  /*profilePhoto: string*/
+  profilePhoto: string
 }
