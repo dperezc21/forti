@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {UserAuthenticationController} from '../../core/controllers/user-authentication.controller';
-import {UserLoginModel} from '../../core/models/user-auth.model';
 import {RouterLink} from '@angular/router';
 
 @Component({

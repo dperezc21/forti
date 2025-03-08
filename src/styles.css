@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #a155e8;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 65px;
+}
+
+.label-margin {
+  margin: 5px 15px;
+}
+
+.flex-row {
+  display:flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.margin-5 {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.labels-container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.form-input {
+  margin: 5px;
+  width: 250px;
+  height: 15px;
+}
+
+.other-options {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+  font-size: 15px;
+}
+
+.option-margin {
+  margin: 8px 5px;
+  cursor: pointer;
+}
+
+.link-a {
+  text-decoration: none;
+  color: white;
+}
+
+.submit-button {
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}

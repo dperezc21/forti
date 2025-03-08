@@ -1,0 +1,29 @@
+<div class="main">
+  <h1 class="title">Forti</h1>
+  <div class="form-container">
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser()" class="flex-row">
+
+      <div class="labels-container">
+        <label class="label-margin">Nombre</label>
+        <label class="label-margin">Apellidos</label>
+        <label class="label-margin">Fecha de nacimiento</label>
+        <label class="label-margin">Email</label>
+        <label class="label-margin">Contraseña</label>
+      </div>
+      <div class="flex-column">
+        <input type="text" formControlName="name" class="form-input">
+        <input type="text" formControlName="surnames" class="form-input">
+        <input type="date" formControlName="birthDay" class="form-input">
+        <input type="text" formControlName="email" class="form-input">
+        <input type="text" formControlName="password" class="form-input">
+
+        <div class="margin-5">
+          <input type="submit" value="Registrarse" class="submit-button">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="other-options">
+    <a class="link-a option-margin" [routerLink]="'/auth/log-in'">¿Ya tienes una cuenta?</a>
+  </div>
+</div>
