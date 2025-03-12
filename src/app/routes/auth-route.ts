@@ -4,7 +4,7 @@ import {RegisterFormComponent} from '../components/register-form/register-form.c
 
 export const authRoute: Routes  = [
   {
-    path: 'log-in',
+    path: 'login',
     component: LogInFormComponent
   },
   {
