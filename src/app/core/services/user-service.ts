@@ -11,8 +11,9 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   login(userName: string, password: string): Observable<AuthUserResponse> {
-    return this.http.get(`${AUTH_LOGIN}?userName=${userName}&password=${password}`)
-      .pipe(map(value => value as AuthUserResponse));
+    return this.http.post(`${AUTH_LOGIN}`, {
+      username: userName, password
+    }).pipe(map(value => value as AuthUserResponse));
   }
 
   registerUser(user: UserRegisterModel): Observable<AuthUserResponse> {
